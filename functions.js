@@ -29,7 +29,7 @@ function addAccount(firstName, lastName, email, age){
     }
 
     const id = generateUniqueID(firstName,lastName);
-    const user = '${firstName},${lastName},${email},${age},${id}'; //concatenates string
+    const user = firstName+","+lastName+","+email+","+age+","+id; //concatenates string
     return fs.appendFileSync("users.txt", user + "\n"); //adds user data to users.txt
 }
 
